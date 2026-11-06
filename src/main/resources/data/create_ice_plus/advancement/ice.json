@@ -1,0 +1,35 @@
+{
+  "parent": "create_ice_plus:root",
+  "display": {
+    "icon": {
+      "id": "minecraft:ice"
+    },
+    "title": {
+      "translate": "advancement.create_ice_plus.ice.title"
+    },
+    "description": {
+      "translate": "advancement.create_ice_plus.ice.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "has_ice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:ice",
+              "minecraft:packed_ice",
+              "minecraft:blue_ice",
+              "minecraft:frosted_ice"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

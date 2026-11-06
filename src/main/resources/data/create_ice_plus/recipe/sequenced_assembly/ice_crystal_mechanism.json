@@ -1,0 +1,59 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "create:precision_mechanism"
+  },
+  "loops": 5,
+  "results": [
+    {
+      "chance": 64.0,
+      "id": "create_ice_plus:ice_crystal_mechanism"
+    },
+    {
+      "chance": 8.0,
+      "id": "minecraft:blue_ice"
+    },
+    {
+      "chance": 5.0,
+      "id": "create:andesite_alloy"
+    },
+    {
+      "chance": 3.0,
+      "id": "create:cogwheel"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create_ice_plus:incomplete_ice_crystal_mechanism"
+        },
+        {
+          "item": "minecraft:blue_ice"
+        }
+      ],
+      "results": [
+        {
+          "id": "create_ice_plus:incomplete_ice_crystal_mechanism"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "create_ice_plus:incomplete_ice_crystal_mechanism"
+        }
+      ],
+      "results": [
+        {
+          "id": "create_ice_plus:incomplete_ice_crystal_mechanism"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "create_ice_plus:incomplete_ice_crystal_mechanism"
+  }
+}

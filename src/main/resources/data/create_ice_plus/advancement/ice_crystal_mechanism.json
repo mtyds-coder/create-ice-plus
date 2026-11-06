@@ -1,0 +1,32 @@
+{
+  "parent": "create_ice_plus:root",
+  "display": {
+    "icon": {
+      "id": "create_ice_plus:ice_crystal_mechanism"
+    },
+    "title": {
+      "translate": "advancement.create_ice_plus.ice_crystal.title"
+    },
+    "description": {
+      "translate": "advancement.create_ice_plus.ice_crystal.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "has_mechanism": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "create_ice_plus:ice_crystal_mechanism"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

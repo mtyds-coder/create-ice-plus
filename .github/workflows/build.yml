@@ -1,0 +1,44 @@
+name: Build
+
+# 本项目的 Create / Flywheel / Ponder / Registrate / JEI 依赖以本地 jar 形式放在 libs/ 下，
+# 且 libs/*.jar 不随仓库分发（见 .gitignore）。因此默认不在 push 时自动构建 ——
+# 否则每次提交都会因为缺少 libs/ 而失败。
+#
+# 想启用 CI，两种方式：
+#   1. 在 build.gradle 里把依赖切回 maven.createmod.net（见依赖块注释），
+#      然后把下面的 workflow_dispatch 改回 push / pull_request；
+#   2. 或在本工作流里加一个下载 libs/ 各 jar 的步骤。
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+
+      - name: Check for local dependency jars
+        run: |
+          if [ ! -f libs/create-1.21.1-6.0.10.jar ]; then
+            echo "::error::libs/ 缺少 Create 依赖 jar，无法构建。请见 README 的「依赖说明」。"
+            exit 1
+          fi
+
+      - name: Setup JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Make Gradle wrapper executable
+        run: chmod +x ./gradlew
+
+      - name: Build with Gradle
+        run: ./gradlew build --offline

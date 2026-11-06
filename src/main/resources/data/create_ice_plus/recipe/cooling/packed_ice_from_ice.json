@@ -1,0 +1,18 @@
+{
+  "type": "create_ice_plus:cooling",
+  "ingredients": [
+    {
+      "item": "minecraft:ice"
+    },
+    {
+      "item": "minecraft:ice"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:packed_ice",
+      "count": 1
+    }
+  ],
+  "processing_time": 150
+}

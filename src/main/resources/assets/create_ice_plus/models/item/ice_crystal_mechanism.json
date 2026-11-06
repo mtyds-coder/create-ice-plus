@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "create_ice_plus:item/ice_crystal_mechanism"
+  }
+}

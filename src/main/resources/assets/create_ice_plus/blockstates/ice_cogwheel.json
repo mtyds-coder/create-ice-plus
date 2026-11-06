@@ -1,0 +1,17 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "create_ice_plus:block/ice_cogwheel_empty"
+    },
+    "axis=x": {
+      "model": "create_ice_plus:block/ice_cogwheel_empty",
+      "x": 90,
+      "y": 90
+    },
+    "axis=z": {
+      "model": "create_ice_plus:block/ice_cogwheel_empty",
+      "x": 90,
+      "y": 180
+    }
+  }
+}

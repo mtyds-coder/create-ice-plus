@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:blue_ice"
+    },
+    "title": {
+      "translate": "advancement.create_ice_plus.root.title"
+    },
+    "description": {
+      "translate": "advancement.create_ice_plus.root.description"
+    },
+    "background": "create_ice_plus:textures/gui/advancements/backgrounds/ice.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "joined_world": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " P ",
+    "PCP",
+    " P "
+  ],
+  "key": {
+    "P": {
+      "item": "minecraft:packed_ice"
+    },
+    "C": {
+      "item": "create_ice_plus:ice_cogwheel"
+    }
+  },
+  "result": {
+    "id": "create_ice_plus:ice_large_cogwheel",
+    "count": 2
+  }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>机械动力：冰+ — 词条正文（复制用）</title>
+<style>
+  body {
+    font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+    color: #222;
+    max-width: 860px;
+    margin: 32px auto;
+    padding: 0 20px;
+    background: #fff;
+  }
+  h1 { font-size: 24px; border-bottom: 2px solid #cfe3f5; padding-bottom: 8px; }
+  h2 { font-size: 19px; margin-top: 28px; border-left: 4px solid #4a90d9; padding-left: 10px; }
+  h3 { font-size: 16px; margin-top: 20px; color: #1e4d7b; }
+  table { border-collapse: collapse; margin: 12px 0; }
+  th, td { border: 1px solid #bbb; padding: 6px 14px; }
+  th { background: #eef5fc; }
+  code { background: #f2f4f7; padding: 1px 5px; border-radius: 3px; font-family: Consolas, monospace; }
+  ul, ol { padding-left: 26px; }
+  li { margin: 4px 0; }
+  .tip { color: #888; font-size: 13px; }
+</style>
+</head>
+<body>
+
+<p class="tip">下面这一整页：在浏览器里 Ctrl+A 全选 → Ctrl+C 复制 → 粘进 MC百科的富文本编辑器。粘完检查一下表格和列表是否正常，图片需要另外上传。</p>
+
+<hr>
+
+<h1>机械动力：冰+</h1>
+
+<p><strong>Create: Ice Plus</strong> 是机械动力（Create）的附属模组，围绕「冰」这一主题添加内容：一门可切换弹药的手持冰块发射器，以及能真正接入动能网络的冰齿轮。</p>
+
+<h2>内容介绍</h2>
+
+<h3>冰块发射器</h3>
+
+<p>手持右键即可开火，消耗背包中的冰作为弹药。三种弹药拥有不同的伤害、装填时间与击退强度：</p>
+
+<table>
+  <tr><th>弹药</th><th>伤害</th><th>装填时间</th><th>击退</th></tr>
+  <tr><td>冰</td><td>6</td><td>10 刻</td><td>0.10</td></tr>
+  <tr><td>浮冰</td><td>9</td><td>14 刻</td><td>0.30</td></tr>
+  <tr><td>蓝冰</td><td>12</td><td>20 刻</td><td>0.50</td></tr>
+</table>
+
+<ul>
+  <li>受 <strong>力量</strong> 附魔（提升伤害）与 <strong>冲击</strong> 附魔（提升击退）加成</li>
+  <li>命中生物时附加冻结与缓慢效果，时长可在配置中调整</li>
+  <li>弹药命中后有一定概率掉回地面被回收，越便宜的弹药回收率越高</li>
+  <li>每次开火消耗 1 点耐久，共 384 点</li>
+  <li>第一人称视角有后坐力动画，手臂呈弩持姿态</li>
+  <li>炮身上的齿轮闲置时缓慢转动，开火后加速旋转，可以直观看出刚开过火</li>
+  <li>悬停物品可查看当前弹药的伤害、装填与击退数值</li>
+</ul>
+
+<h3>冰齿轮与冰大齿轮</h3>
+
+<p>并非装饰方块。二者接入机械动力的动能网络后，可以正常传递旋转与应力、与其他齿轮啮合，也支持支架与扳手操作，行为与原版齿轮一致，仅外观改为冰蓝色。</p>
+
+<h2>合成配方</h2>
+
+<h3>冰齿轮（产出 2 个）</h3>
+<p>工作台中，中间放置<strong>传动杆</strong>，上下左右各放置一个<strong>浮冰</strong>。</p>
+
+<h3>冰大齿轮（产出 2 个）</h3>
+<p>工作台中，中间放置<strong>冰齿轮</strong>，上下左右各放置一个<strong>浮冰</strong>。</p>
+
+<h2>成就</h2>
+
+<ul>
+  <li><strong>机械动力：冰+</strong> —— 进入存档即可获得</li>
+  <li><strong>冰冰冰</strong> —— 获得任意一种冰（冰、浮冰、蓝冰或霜冰均可）</li>
+</ul>
+
+<h2>配置</h2>
+
+<p>配置文件位于 <code>config/create_ice_plus-common.toml</code>，也可在游戏的模组配置界面中直接修改：</p>
+
+<table>
+  <tr><th>配置项</th><th>默认值</th><th>说明</th></tr>
+  <tr><td>damageMultiplier</td><td>1.0</td><td>全部弹药的伤害倍率</td></tr>
+  <tr><td>projectileSpeed</td><td>2.0</td><td>冰弹基础初速度</td></tr>
+  <tr><td>consumeAmmo</td><td>true</td><td>开火是否消耗弹药</td></tr>
+  <tr><td>freezeTicks</td><td>60</td><td>命中后的冻结与缓慢时长（刻）</td></tr>
+</table>
+
+<h2>前置要求</h2>
+
+<ul>
+  <li>Minecraft <strong>1.21.1</strong></li>
+  <li>NeoForge <strong>21.1.230</strong> 或更新</li>
+  <li><strong>机械动力 6.0.10 或更新</strong>（必需，缺失时无法启动）</li>
+</ul>
+
+<p><strong>本模组服务端与客户端都必须安装</strong>——它包含方块与实体，无法只装在客户端。</p>
+
+<h2>已知限制</h2>
+
+<ul>
+  <li>冰块发射器暂未提供合成配方，目前只能通过创造模式获取</li>
+  <li>尚未制作思索（Ponder）场景</li>
+  <li>多人游戏中，其他玩家的开火动画不会同步显示</li>
+  <li>伤害与装填数值尚未经过平衡测试，后续可能调整</li>
+</ul>
+
+<h2>声明</h2>
+
+<p>部分模型与贴图资源基于 <a href="https://modrinth.com/mod/create">Create</a>（MIT License）修改。</p>
+
+</body>
+</html>

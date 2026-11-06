@@ -1,0 +1,47 @@
+# 模组元数据。文件里的占位符由 build.gradle 的 generateModMetadata 任务在构建时展开。
+# 注意：连注释里也不要出现美元符号紧跟花括号的写法，否则会被当成 Groovy 模板表达式而报错。
+modLoader="javafml" #mandatory
+loaderVersion="${loader_version_range}" #mandatory
+license="${mod_license}"
+
+[[mods]] #mandatory
+modId="${mod_id}" #mandatory
+version="${mod_version}" #mandatory
+displayName="${mod_name}" #mandatory
+authors="MTYCreate"
+# 模组列表里显示的图标（放在 jar 根目录）
+logoFile="icon.png"
+description='''
+机械动力：冰+ —— 机械动力（Create）的附属模组，围绕“冰”加入武器与装置。
+Create: Ice Plus - an addon for Create centred around ice.
+'''
+
+# ---------------- Mixin ----------------
+# 工作盆「冷却」支持（Create 的 HeatCondition 没有冷却状态，只能注入）
+[[mixins]]
+    config="${mod_id}.mixins.json"
+
+# ---------------- 依赖 ----------------
+
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="[${neo_version},)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+# 本模组是 Create 的附属，必须装了 Create 才能加载。
+# 版本范围与 libs/ 里实际编译用的 Create 版本保持同一发布线。
+[[dependencies.${mod_id}]]
+    modId="create"
+    type="required"
+    versionRange="[6.0.10,6.1.0)"
+    ordering="AFTER"
+    side="BOTH"

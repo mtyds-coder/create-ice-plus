@@ -1,0 +1,17 @@
+{
+  "type": "create_ice_plus:cooling",
+  "ingredients": [
+    {
+      "type": "neoforge:single",
+      "amount": 1000,
+      "fluid": "minecraft:water"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:ice",
+      "count": 1
+    }
+  ],
+  "processing_time": 200
+}
